@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa66ecaf-d09b-476e-b041-60452a7b52fd" name="Changes" comment="Initial commit for publication">
-      <change beforePath="$PROJECT_DIR$/vis/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+    <list default="true" id="aa66ecaf-d09b-476e-b041-60452a7b52fd" name="Changes" comment="Preparation for Github pages rollout">
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-color.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-color.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format_only-letters-postcards-telegrams.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format_only-letters-postcards-telegrams.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format_without-overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format_without-overlay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-sender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-sender.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-size.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-size.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-text-fill.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-text-fill.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-year.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-year.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "johlei"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/johlei/Visual-Characteristics-Publication.git",
@@ -44,6 +58,7 @@
       <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication\docs\vis" />
       <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication\docs" />
       <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication\src" />
     </key>
@@ -63,7 +78,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772037263310</updated>
-      <workItem from="1772037264472" duration="506000" />
+      <workItem from="1772037264472" duration="1201000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for publication">
       <option name="closed" value="true" />
@@ -73,7 +88,15 @@
       <option name="project" value="LOCAL" />
       <updated>1772037581345</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Preparation for Github pages rollout">
+      <option name="closed" value="true" />
+      <created>1772037858439</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1772037858439</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit for publication" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit for publication" />
+    <MESSAGE value="Preparation for Github pages rollout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Preparation for Github pages rollout" />
   </component>
 </project>
