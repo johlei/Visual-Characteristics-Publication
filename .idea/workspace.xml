@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa66ecaf-d09b-476e-b041-60452a7b52fd" name="Changes" comment="Preparation for Github pages rollout">
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-color.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-color.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format_only-letters-postcards-telegrams.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format_only-letters-postcards-telegrams.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-format_without-overlay.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-format_without-overlay.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-sender.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-sender.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-size.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-size.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-text-fill.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-text-fill.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vis/Dehmel_letters-by-year.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/vis/Dehmel_letters-by-year.html" afterDir="false" />
+    <list default="true" id="aa66ecaf-d09b-476e-b041-60452a7b52fd" name="Changes" comment="Updated and fixed visualizations">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/visualizations/Dehmel_letters-by-size.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,21 +13,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "johlei"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;johlei&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/johlei/Visual-Characteristics-Publication.git",
-    "accountId": "7dfd039d-dcc9-41f9-9347-b6e649a4d741"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/johlei/Visual-Characteristics-Publication.git&quot;,
+    &quot;accountId&quot;: &quot;7dfd039d-dcc9-41f9-9347-b6e649a4d741&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="3AAZJP2WXrRzZ3jgu2k4Ik4HfWB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -43,17 +36,27 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.generate-visualisation.executor": "Run",
+    "Python.scratch.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "ai.playground.ignore.import.keys.banner.in.settings": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/jol26qv/PycharmProjects/Visual-Characteristics-Publication/vis",
+    "last_opened_file_path": "C:/Users/jol26qv/PycharmProjects/Visual-Characteristics-Publication/eval",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication\eval" />
+      <recent name="C:\Users\jol26qv\AppData\Roaming\JetBrains\PyCharm2025.3\scratches" />
       <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication\vis" />
       <recent name="C:\Users\jol26qv\PycharmProjects\Visual-Characteristics-Publication" />
     </key>
@@ -78,7 +81,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772037263310</updated>
-      <workItem from="1772037264472" duration="1201000" />
+      <workItem from="1772037264472" duration="5221000" />
+      <workItem from="1772535045261" duration="12046000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit for publication">
       <option name="closed" value="true" />
@@ -96,7 +100,47 @@
       <option name="project" value="LOCAL" />
       <updated>1772037858439</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Github pages rollout">
+      <option name="closed" value="true" />
+      <created>1772038534869</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1772038534869</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixes to Github pages rollout">
+      <option name="closed" value="true" />
+      <created>1772038804178</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1772038804178</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added strict PEP8 formatting and further documentation, aided by ChatGPT">
+      <option name="closed" value="true" />
+      <created>1772124856494</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1772124856494</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated and fixed visualizations">
+      <option name="closed" value="true" />
+      <created>1772556993726</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772556993726</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated and fixed visualizations">
+      <option name="closed" value="true" />
+      <created>1772559006962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772559006962</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,6 +160,14 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit for publication" />
     <MESSAGE value="Preparation for Github pages rollout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Preparation for Github pages rollout" />
+    <MESSAGE value="Github pages rollout" />
+    <MESSAGE value="Fixes to Github pages rollout" />
+    <MESSAGE value="Added strict PEP8 formatting and further documentation, aided by ChatGPT" />
+    <MESSAGE value="Updated and fixed visualizations" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated and fixed visualizations" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Visual_Characteristics_Publication$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1772537535657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/Visual_Characteristics_Publication$generate_visualisation.coverage" NAME="generate-visualisation Coverage Results" MODIFIED="1772551922166" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
