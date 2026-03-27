@@ -22,7 +22,7 @@ import re
 
 def letters_by_format(df: pd.DataFrame):
     """plots documents by raw size in scan orientation"""
-    fig = px.scatter(df, x="page_w_mm", y="page_h_mm", title="Abmaße der Briefe (in Schreibrichtung)",
+    fig = px.scatter(df, x="page_w_mm", y="page_h_mm",
                      color="format_jl", hover_name="filename",
                      hover_data=["Absender:innen", "Datum (zuerst lt Datumszeile, alternativ Poststempel)", "Transkribus-ID"],
                      labels={"page_w_mm": "Breite (mm)", "page_h_mm": "Höhe (mm)", "format_jl": "Format"})
@@ -42,19 +42,25 @@ def letters_by_format(df: pd.DataFrame):
     fig.add_trace(go.Scatter(x=x_vals_2_3, y=y_vals_2_3, mode="lines", line=dict(dash="dash", color="red", width=2), name="2/3"))
     fig.add_trace(go.Scatter(x=x_vals_golden, y=y_vals_golden, mode="lines", line=dict(dash="dash", color="orange", width=2), name="Golden Ratio"))
 
-
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-format.html")
 
 
 def letters_by_size(df: pd.DataFrame):
     """plots documents by format of shorter and longer side, scan orientation is ignored"""
-    fig = px.scatter(df, x="page_shorter_mm", y="page_longer_mm", title="Abmaße der Briefe (längere / kürzere Seite)",
+    fig = px.scatter(df, x="page_shorter_mm", y="page_longer_mm",
                      color="format_jl", hover_name="filename",
                      hover_data=["Absender:innen", "Datum (zuerst lt Datumszeile, alternativ Poststempel)", "Transkribus-ID"],
                      labels={"page_shorter_mm": "Kürzere Seite (mm)", "page_longer_mm": "Längere Seite (mm)", "format_jl": "Format"})
 
     x_vals_4_5 = np.linspace(0,350,100)
     y_vals_4_5 = (5/4) * x_vals_4_5
+    x_vals_1_sqrt2 = np.linspace(0, 350, 100)
+    y_vals_1_sqrt2 = np.sqrt(2) * x_vals_1_sqrt2
     x_vals_2_3 = np.linspace(0,350,100)
     y_vals_2_3 = (3/2) *x_vals_2_3
     x_vals_golden = np.linspace(0,350,100)
@@ -73,20 +79,25 @@ def letters_by_size(df: pd.DataFrame):
     fig.add_trace(go.Scatter(x=x_vals_2_3, y=y_vals_2_3, mode="lines", line=dict(dash="dash", color="red", width=2), name="2/3"))
     fig.add_trace(go.Scatter(x=x_vals_golden, y=y_vals_golden, mode="lines", line=dict(dash="dash", color="orange", width=2), name="Goldener Schnitt"))
 
-
-    # Zeige das Diagramm an
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-size.html")
 
 
 def letters_by_size_wo_overlay(df):
     """plots documents by format of shorter and longer side, scan orientation is ignored, without overlays"""
-    fig = px.scatter(df, x="page_shorter_mm", y="page_longer_mm", title="Abmaße der Briefe (längere / kürzere Seite)",
+    fig = px.scatter(df, x="page_shorter_mm", y="page_longer_mm",
                      color="format_jl", hover_name="filename",
                      hover_data=["Absender:innen", "Datum (zuerst lt Datumszeile, alternativ Poststempel)", "Transkribus-ID"],
-                     labels={"page_w_mm": "Breite (mm)", "page_h_mm": "Höhe (mm)", "format_jl": "Format"})
+                     labels={"page_shorter_mm": "Kürzere Seite (mm)", "page_longer_mm": "Längere Seite (mm)", "format_jl": "Format"})
 
     x_vals_4_5 = np.linspace(0,350,100)
     y_vals_4_5 = (5/4) * x_vals_4_5
+    x_vals_1_sqrt2 = np.linspace(0, 350, 100)
+    y_vals_1_sqrt2 = np.sqrt(2) * x_vals_1_sqrt2
     x_vals_2_3 = np.linspace(0,350,100)
     y_vals_2_3 = (3/2) *x_vals_2_3
     x_vals_golden = np.linspace(0,350,100)
@@ -97,7 +108,11 @@ def letters_by_size_wo_overlay(df):
     fig.add_trace(go.Scatter(x=x_vals_2_3, y=y_vals_2_3, mode="lines", line=dict(dash="dash", color="red", width=2), name="2/3"))
     fig.add_trace(go.Scatter(x=x_vals_golden, y=y_vals_golden, mode="lines", line=dict(dash="dash", color="orange", width=2), name="Golden Ratio"))
 
-    # Zeige das Diagramm an
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-size_without-overlay.html")
 
 
@@ -106,28 +121,39 @@ def letters_by_size_only_letters_postcards_telegrams(df):
     types (postcards, letters, telegrams) and with box plots in marginals"""
     df_filtered = df[df['format_jl'].isin(['Brief', 'Postkarte', 'Ansichtskarte', 'Telegramm'])]
     df_filtered["format_jl"] = df_filtered["format_jl"].replace("Ansichtskarte", "Postkarte")
-    fig = px.scatter(df_filtered, x="page_shorter_mm", y="page_longer_mm", title="Abmaße der Briefe (längere / kürzere Seite; Ansichtskarten werden als Postkarten gezählt)",
+    fig = px.scatter(df_filtered, x="page_shorter_mm", y="page_longer_mm",
                      color="format_jl", hover_name="hans_id_norm", marginal_x="box", marginal_y="box",
                      hover_data=["Absender:innen", "Datum (zuerst lt Datumszeile, alternativ Poststempel)",
                                  "Transkribus-ID"],
                      labels={"page_shorter_mm": "Kürzere Seite (mm)", "page_longer_mm": "längere Seite (mm)", "format_jl": "Format"})
+
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-size_only-letters-postcards-telegrams.html")
 
 
-def letters_by_sender (df):
+def letters_by_sender(df):
     """plots documents by sender in scan orientation"""
     df["main_sender"] = df["Absender:innen"].str.strip(" [].,1234567890()").str.split("[,;]").str[0]
-    fig = px.scatter(df, x="page_w_mm", y="page_h_mm", title="Absender:innen der Briefe",
+    fig = px.scatter(df, x="page_w_mm", y="page_h_mm",
                      color="main_sender", hover_name="hans_id_norm",
                      hover_data=["Absender:innen", "format_jl", "Datum (zuerst lt Datumszeile, alternativ Poststempel)",
                                  "Transkribus-ID"],
                      labels={"page_w_mm": "Breite (mm)", "page_h_mm": "Höhe (mm)", "format_jl": "Format"})
-    # Zeige das Diagramm an
+
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-sender.html")
 
 
-def page_fill (df):
-    fig = px.box(df[(df["format_jl"] == "Brief")], y="text_fill", title="Schriftraum der Briefseiten")
+def page_fill(df):
+    fig = px.box(df[(df["format_jl"] == "Brief")], y="text_fill")
     mean_fischer = df[(df['Absender:innen'] == "Samuel Fischer") & (df["format_jl"] == "Brief")]['text_fill'].mean()
     mean_r_dehmel = df[(df['Absender:innen'] == "Richard Dehmel") & (df["format_jl"] == "Brief")]['text_fill'].mean()
     mean_i_dehmel = df[(df['Absender:innen'] == "Ida Dehmel") & (df["format_jl"] == "Brief")]['text_fill'].mean()
@@ -137,6 +163,12 @@ def page_fill (df):
     fig.add_annotation(x=-.3, y=mean_r_dehmel, text="Richard Dehmel", bgcolor="lightgreen", opacity=0.7, align="center")
     fig.add_hline(y=mean_i_dehmel, line=dict(color='yellow', dash='dash', width=2), name="Ida Dehmel")
     fig.add_annotation(x=-.3, y=mean_i_dehmel, text="Ida Dehmel", bgcolor="lightyellow", opacity=0.7, align="center")
+
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-text-fill.html")
 
 
@@ -149,10 +181,20 @@ def letters_by_color(df):
                         hover_name="filename",
                         hover_data=["Absender:innen", "format_jl",
                                     "Datum (zuerst lt Datumszeile, alternativ Poststempel)",
-                                    "Transkribus-ID"],
-                        title="Papierfarbe der Briefe")
+                                    "Transkribus-ID"])
     fig.update_traces(marker=dict(color=df['color_rgb'], size=3))
     fig.add_trace(go.Scatter3d(x=[0,255], y=[0,255], z=[0,255], mode="lines", line=dict(dash="dash", color="black", width=2), name="b/w"))
+
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=24)),
+        scene=dict(
+            xaxis=dict(title_font=dict(size=24), tickfont=dict(size=14)),
+            yaxis=dict(title_font=dict(size=24), tickfont=dict(size=14)),
+            zaxis=dict(title_font=dict(size=24), tickfont=dict(size=14)),
+        )
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-color.html")
 
 
@@ -161,7 +203,13 @@ def letter_by_years(df):
     yearly_counts = df["Jahr"].value_counts().reset_index()
     yearly_counts.columns = ["Jahr", "Anzahl"]
     yearly_counts = yearly_counts.sort_values("Jahr")
-    fig = px.bar(yearly_counts, x="Jahr", y="Anzahl", title="Anzahl der Briefe pro Jahr")
+    fig = px.bar(yearly_counts, x="Jahr", y="Anzahl")
+
+    fig.update_layout(
+        title=dict(text=""),
+        font=dict(size=24),
+        legend=dict(font=dict(size=20)),
+    )
     fig.write_html(r"..\docs\vis\Dehmel_letters-by-year.html")
 
 
